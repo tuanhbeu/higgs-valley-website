@@ -511,7 +511,7 @@
 			}
 
 		.image img {
-			border-radius: 0.35em;
+			/*border-radius: 0.35em;*/
 			display: block;
 		}
 
@@ -934,7 +934,7 @@
 /* Header */
 
 	#header {
-		background-color: #646a1c;
+		background-color: #2F2724;
 		background-attachment: scroll,								fixed;
 		background-image: url("images/overlay.png"), url("../images/bg.jpg");
 		background-position: top left,							top left;
@@ -1256,4 +1256,12 @@
     .stores a {
         font-size: 4em;
         margin: 0 22px;
+    }
+
+    .responsive {
+        width: 100%;
+    }
+
+    .responsive img {
+        max-width: 100%;
     }
