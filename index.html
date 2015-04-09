@@ -18,13 +18,17 @@
 		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
 		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
+            <link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 
 		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+        <link rel="stylesheet" type="text/css" href="js/slick-1.5.0/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="js/slick-1.5.0/slick-theme.css"/>
+
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body id="top">
 
@@ -43,13 +47,39 @@
 				<!-- One -->
 					<section id="one">
                         <div class="align-center">
-                            <a href="images/bg_tach.jpg" class="image responsive thumb"><img src="images/sw.jpg" alt="" /></a>
+
+                            <div class="slider" data-slick="">
+                                <div><a href="images/bg_tach.jpg" class="image responsive thumb"><img src="images/sw.jpg" alt="" /></a></div>
+                                <div><a href="images/sw-loadingscreen.jpg" class="image responsive thumb"><img src="images/sw-loadingscreen.jpg" alt="" /></a></div>
+                                <div><a href="images/tap.jpg" class="image responsive thumb"><img src="images/tap.jpg" alt="" /></a></div>
+                                <div><a href="images/tilt-left.jpg" class="image responsive thumb"><img src="images/tilt-left.jpg" alt="" /></a></div>
+                                <div><a href="images/tilt-right.jpg" class="image responsive thumb"><img src="images/tilt-right.jpg" alt="" /></a></div>
+
+                            </div>
+
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    $('.slider').slick({
+                                        dots: true,
+                                        infinite: true,
+                                        speed: 500,
+                                        fade: true,
+                                        cssEase: 'linear',
+                                        adaptiveHeight: true,
+                                        autoplay: true,
+                                        autoplaySpeed: 1500,
+                                        pauseOnHover: false,
+                                        pauseOnDotsHover: false
+                                    });
+                                })
+                            </script>
+
                             <h3>SoftWings Mobile Game</h3>
-                            <p>A game for peace and love</p>
+                            <p>Don't play this game if you hate peace ...</p>
                             <div class="stores">
-                                <a href="#" class="icon fa-apple"><span class="label">iOS</span></a>
-                                <a href="#" class="icon fa-android"><span class="label">Android</span></a>
-                                <a href="#" class="icon fa-windows"><span class="label">Windows Phone</span></a>
+                                <a class="download-store" href="https://itunes.apple.com/us/app/soft-wings/id965853939?ls=1&mt=8"><img src="images/app-store.jpg"></a>
+                                <a class="download-store" href="https://play.google.com/store/apps/details?id=com.violethill.softwingsfree"><img src="images/playstore.jpg"></a>
+                                <a class="download-store" href="#"><img src="images/windows-store.jpg"></a>
                             </div>
                         </div>
 					</section>
