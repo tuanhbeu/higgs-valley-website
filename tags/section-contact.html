@@ -1,0 +1,50 @@
+<!-- Three -->
+<section id="three">
+    <h2>Get In Touch</h2>
+    <p>Feel free to contact us.</p>
+    <div class="row">
+        <div class="8u 12u$(small)">
+            <form method="post" action="#" id="contactForm">
+                <div class="row uniform 50%">
+                    <div class="6u 12u$(xsmall)"><input type="text" name="cname" id="name" placeholder="Name" /></div>
+                    <div class="6u$ 12u$(xsmall)"><input type="email" name="cemail" id="email" placeholder="Email" /></div>
+                    <div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message" id="sendMail"/></li>
+                </ul>
+            </form>
+            <script type="text/javascript">
+                $(document).ready(function(){
+
+                    $("#sendMail").bind('click', function(e) {
+                        e.preventDefault();
+                        var name = $("#name").val();
+                        var email = encodeURI($("#email").val());
+                        var message = $("#message").val();
+                        window.location.href = "mailto:hungduong@higgsvalley.com?Subject=&body=" + message;
+//                                            alert("Thank you for your feedback, " + name + "! We going to response as soon as possible.")
+                    })
+                })
+            </script>
+        </div>
+        <div class="4u$ 12u$(small)">
+            <ul class="labeled-icons">
+                <li>
+                    <h3 class="icon fa-home"><span class="label">Address</span></h3>
+                    202 Vu Pham Ham<br />
+                    Yen Hoa, Cau Giay, Hanoi<br />
+                    Vietnam
+                </li>
+                <li>
+                    <h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
+                    (+84) 985 40 20 86
+                </li>
+                <li>
+                    <h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+                    <a href="#">info@higgsvalley.com</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
